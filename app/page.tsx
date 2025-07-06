@@ -8,6 +8,7 @@ import ResumePreview from '@/components/ResumePreview'
 import TemplateSelector from '@/components/TemplateSelector'
 import SampleResumes from '@/components/SampleResumes'
 import DocxTemplateUpload from '@/components/DocxTemplateUpload'
+import TemplateProcessor from '@/components/TemplateProcessor'
 import { ResumeData } from '@/types/resume'
 
 export default function Home() {
@@ -178,6 +179,11 @@ export default function Home() {
                   </div>
                 )}
               </div>
+            </div>
+
+            {/* Template Gallery Section */}
+            <div className="mt-16">
+              <TemplateProcessor onTemplateProcessed={handleUseSampleTemplate} />
             </div>
           </div>
         )}
