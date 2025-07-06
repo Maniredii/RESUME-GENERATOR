@@ -154,7 +154,6 @@ export default function DocxProcessor({ onTemplateExtracted, onError }: DocxProc
         skillNames.forEach(skillName => {
           resumeData.skills.push({
             name: skillName,
-            level: 'intermediate',
             category: 'technical'
           })
         })

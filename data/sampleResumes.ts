@@ -77,14 +77,14 @@ export const sampleResumes: ResumeData[] = [
       }
     ],
     skills: [
-      { name: 'JavaScript', level: 'expert', category: 'technical' },
-      { name: 'React', level: 'expert', category: 'technical' },
-      { name: 'Node.js', level: 'advanced', category: 'technical' },
-      { name: 'TypeScript', level: 'advanced', category: 'technical' },
-      { name: 'AWS', level: 'intermediate', category: 'technical' },
-      { name: 'Leadership', level: 'advanced', category: 'soft' },
-      { name: 'Problem Solving', level: 'expert', category: 'soft' },
-      { name: 'Communication', level: 'advanced', category: 'soft' }
+      { name: 'JavaScript', category: 'technical' },
+      { name: 'React', category: 'technical' },
+      { name: 'Node.js', category: 'technical' },
+      { name: 'TypeScript', category: 'technical' },
+      { name: 'AWS', category: 'technical' },
+      { name: 'Leadership', category: 'soft' },
+      { name: 'Problem Solving', category: 'soft' },
+      { name: 'Communication', category: 'soft' }
     ],
     certifications: [
       {
@@ -177,14 +177,14 @@ export const sampleResumes: ResumeData[] = [
       }
     ],
     skills: [
-      { name: 'Figma', level: 'expert', category: 'technical' },
-      { name: 'Sketch', level: 'advanced', category: 'technical' },
-      { name: 'Adobe Creative Suite', level: 'advanced', category: 'technical' },
-      { name: 'User Research', level: 'intermediate', category: 'technical' },
-      { name: 'Prototyping', level: 'advanced', category: 'technical' },
-      { name: 'Creativity', level: 'expert', category: 'soft' },
-      { name: 'Collaboration', level: 'advanced', category: 'soft' },
-      { name: 'Attention to Detail', level: 'expert', category: 'soft' }
+      { name: 'Figma', category: 'technical' },
+      { name: 'Sketch', category: 'technical' },
+      { name: 'Adobe Creative Suite', category: 'technical' },
+      { name: 'User Research', category: 'technical' },
+      { name: 'Prototyping', category: 'technical' },
+      { name: 'Creativity', category: 'soft' },
+      { name: 'Collaboration', category: 'soft' },
+      { name: 'Attention to Detail', category: 'soft' }
     ],
     certifications: [
       {
@@ -287,14 +287,14 @@ export const sampleResumes: ResumeData[] = [
       }
     ],
     skills: [
-      { name: 'Python', level: 'expert', category: 'technical' },
-      { name: 'R', level: 'advanced', category: 'technical' },
-      { name: 'SQL', level: 'advanced', category: 'technical' },
-      { name: 'Machine Learning', level: 'advanced', category: 'technical' },
-      { name: 'Tableau', level: 'intermediate', category: 'technical' },
-      { name: 'Statistical Analysis', level: 'expert', category: 'technical' },
-      { name: 'Problem Solving', level: 'advanced', category: 'soft' },
-      { name: 'Communication', level: 'intermediate', category: 'soft' }
+      { name: 'Python', category: 'technical' },
+      { name: 'R', category: 'technical' },
+      { name: 'SQL', category: 'technical' },
+      { name: 'Machine Learning', category: 'technical' },
+      { name: 'Tableau', category: 'technical' },
+      { name: 'Statistical Analysis', category: 'technical' },
+      { name: 'Problem Solving', category: 'soft' },
+      { name: 'Communication', category: 'soft' }
     ],
     certifications: [
       {
@@ -379,12 +379,12 @@ export const sampleResumes: ResumeData[] = [
       }
     ],
     skills: [
-      { name: 'Sales Management', level: 'expert', category: 'technical' },
-      { name: 'CRM Systems', level: 'advanced', category: 'technical' },
-      { name: 'Negotiation', level: 'expert', category: 'soft' },
-      { name: 'Leadership', level: 'advanced', category: 'soft' },
-      { name: 'Strategic Planning', level: 'advanced', category: 'soft' },
-      { name: 'Client Relations', level: 'expert', category: 'soft' }
+      { name: 'Sales Management', category: 'technical' },
+      { name: 'CRM Systems', category: 'technical' },
+      { name: 'Negotiation', category: 'soft' },
+      { name: 'Leadership', category: 'soft' },
+      { name: 'Strategic Planning', category: 'soft' },
+      { name: 'Client Relations', category: 'soft' }
     ],
     certifications: [
       {
@@ -462,12 +462,12 @@ export const sampleResumes: ResumeData[] = [
       }
     ],
     skills: [
-      { name: 'Social Media Marketing', level: 'expert', category: 'technical' },
-      { name: 'Content Creation', level: 'advanced', category: 'technical' },
-      { name: 'Analytics', level: 'intermediate', category: 'technical' },
-      { name: 'Creative Strategy', level: 'expert', category: 'soft' },
-      { name: 'Communication', level: 'advanced', category: 'soft' },
-      { name: 'Trend Analysis', level: 'advanced', category: 'technical' }
+      { name: 'Social Media Marketing', category: 'technical' },
+      { name: 'Content Creation', category: 'technical' },
+      { name: 'Analytics', category: 'technical' },
+      { name: 'Creative Strategy', category: 'soft' },
+      { name: 'Communication', category: 'soft' },
+      { name: 'Trend Analysis', category: 'technical' }
     ],
     certifications: [
       {
@@ -555,12 +555,12 @@ export const sampleResumes: ResumeData[] = [
       }
     ],
     skills: [
-      { name: 'Corporate Law', level: 'expert', category: 'technical' },
-      { name: 'Litigation', level: 'advanced', category: 'technical' },
-      { name: 'Contract Negotiation', level: 'expert', category: 'technical' },
-      { name: 'Legal Research', level: 'advanced', category: 'technical' },
-      { name: 'Analytical Thinking', level: 'expert', category: 'soft' },
-      { name: 'Communication', level: 'advanced', category: 'soft' }
+      { name: 'Corporate Law', category: 'technical' },
+      { name: 'Litigation', category: 'technical' },
+      { name: 'Contract Negotiation', category: 'technical' },
+      { name: 'Legal Research', category: 'technical' },
+      { name: 'Analytical Thinking', category: 'soft' },
+      { name: 'Communication', category: 'soft' }
     ],
     certifications: [
       {

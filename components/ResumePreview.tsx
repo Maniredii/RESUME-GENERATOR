@@ -24,13 +24,16 @@ export default function ResumePreview({ data, template }: ResumePreviewProps) {
       const canvas = await html2canvas(resumeRef.current, {
         scale: 2,
         useCORS: true,
-        allowTaint: true
+        allowTaint: true,
+        backgroundColor: '#ffffff',
+        width: 210 * 2.83465, // Convert mm to pixels (1mm = 2.83465px)
+        height: 297 * 2.83465
       })
       
-      const imgData = canvas.toDataURL('image/png')
+      const imgData = canvas.toDataURL('image/png', 1.0)
       const pdf = new jsPDF('p', 'mm', 'a4')
       const imgWidth = 210
-      const pageHeight = 295
+      const pageHeight = 297
       const imgHeight = (canvas.height * imgWidth) / canvas.width
       let heightLeft = imgHeight
 
@@ -116,12 +119,19 @@ export default function ResumePreview({ data, template }: ResumePreviewProps) {
       </div>
 
       {/* Resume Preview */}
-      <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-        <div
-          ref={resumeRef}
-          className={`p-8 ${getTemplateStyles()}`}
-          style={{ minHeight: '297mm', width: '210mm' }}
-        >
+      <div className="flex justify-center">
+        <div className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+          <div
+            ref={resumeRef}
+            className={`p-8 ${getTemplateStyles()}`}
+            style={{ 
+              minHeight: '297mm', 
+              width: '210mm',
+              maxWidth: '210mm',
+              margin: '0 auto',
+              boxSizing: 'border-box'
+            }}
+          >
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-3">
@@ -155,12 +165,14 @@ export default function ResumePreview({ data, template }: ResumePreviewProps) {
               {data.experience.map((exp, index) => (
                 <div key={exp.id} className="mb-6">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-semibold text-gray-900">{exp.position}</h3>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-gray-900">{exp.position}</h3>
+                      <p className="text-gray-700 font-medium mb-1 text-sm">{exp.company}, {exp.location}</p>
+                    </div>
                     <span className="text-sm text-gray-600 whitespace-nowrap ml-4">
                       {formatDate(exp.startDate)} - {exp.current ? 'Present' : formatDate(exp.endDate)}
                     </span>
                   </div>
-                  <p className="text-gray-700 font-medium mb-2 text-sm">{exp.company}, {exp.location}</p>
                   <p className="text-gray-600 text-sm mb-3 leading-relaxed">{exp.description}</p>
                   {exp.achievements.length > 0 && (
                     <ul className="list-disc list-inside text-gray-700 text-sm space-y-1 ml-4">
@@ -181,13 +193,15 @@ export default function ResumePreview({ data, template }: ResumePreviewProps) {
               {data.education.map((edu, index) => (
                 <div key={edu.id} className="mb-4">
                   <div className="flex justify-between items-start mb-1">
-                    <h3 className="text-lg font-semibold text-gray-900">{edu.degree} in {edu.field}</h3>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-gray-900">{edu.degree} in {edu.field}</h3>
+                      <p className="text-gray-700 font-medium text-sm">{edu.institution}</p>
+                    </div>
                     <span className="text-sm text-gray-600 whitespace-nowrap ml-4">
                       {formatDate(edu.startDate)} - {formatDate(edu.endDate)}
                     </span>
                   </div>
-                  <p className="text-gray-700 font-medium text-sm mb-1">{edu.institution}</p>
-                  {edu.gpa && <p className="text-gray-600 text-sm">GPA: {edu.gpa}</p>}
+                  {edu.gpa && <p className="text-gray-600 text-sm mb-1">GPA: {edu.gpa}</p>}
                   {edu.achievements && edu.achievements.length > 0 && (
                     <ul className="list-disc list-inside text-gray-600 text-sm mt-1 ml-4">
                       {edu.achievements.map((achievement, i) => (
@@ -206,9 +220,8 @@ export default function ResumePreview({ data, template }: ResumePreviewProps) {
               <h2 className="resume-section-title">Skills</h2>
               <div className="grid grid-cols-2 gap-x-8 gap-y-2">
                 {data.skills.map((skill, index) => (
-                  <div key={index} className="flex justify-between items-center">
-                    <span className="font-medium text-gray-900 text-sm">{skill.name}</span>
-                    <span className="text-gray-600 capitalize text-sm">{skill.level}</span>
+                  <div key={index} className="flex items-center">
+                    <span className="font-medium text-gray-900 text-sm">• {skill.name}</span>
                   </div>
                 ))}
               </div>
@@ -265,6 +278,7 @@ export default function ResumePreview({ data, template }: ResumePreviewProps) {
               ))}
             </div>
           )}
+        </div>
         </div>
       </div>
     </div>

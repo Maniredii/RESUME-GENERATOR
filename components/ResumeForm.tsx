@@ -474,7 +474,6 @@ export default function ResumeForm({ onSubmit, isGenerating, initialData }: Resu
                 type="button"
                 onClick={() => appendSkill({
                   name: '',
-                  level: 'intermediate',
                   category: 'technical'
                 })}
                 className="btn-secondary flex items-center space-x-2"
@@ -497,7 +496,7 @@ export default function ResumeForm({ onSubmit, isGenerating, initialData }: Resu
                   </button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Skill Name</label>
                     <input
@@ -506,19 +505,6 @@ export default function ResumeForm({ onSubmit, isGenerating, initialData }: Resu
                       className="input-field"
                       placeholder="JavaScript"
                     />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">Level</label>
-                    <select
-                      {...register(`skills.${index}.level` as const)}
-                      className="input-field"
-                    >
-                      <option value="beginner">Beginner</option>
-                      <option value="intermediate">Intermediate</option>
-                      <option value="advanced">Advanced</option>
-                      <option value="expert">Expert</option>
-                    </select>
                   </div>
                   
                   <div>

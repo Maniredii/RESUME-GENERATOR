@@ -209,9 +209,8 @@ export default function SampleResumes({ onUseTemplate }: SampleResumesProps) {
                       </h2>
                       <div className="grid grid-cols-2 gap-2">
                         {selectedResume.skills.slice(0, 8).map((skill, index) => (
-                          <div key={index} className="flex justify-between text-sm">
+                          <div key={index} className="flex text-sm">
                             <span className="font-medium text-gray-900">{skill.name}</span>
-                            <span className="text-gray-600 capitalize">{skill.level}</span>
                           </div>
                         ))}
                       </div>
