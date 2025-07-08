@@ -5,6 +5,7 @@ const nextConfig = {
   },
   // Remove env.PORT as it's not a valid Next.js config option
   // Use the -p flag in package.json scripts instead
+  //manideep Reddy
 }
 
 module.exports = nextConfig 
