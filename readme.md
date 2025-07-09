@@ -1,3 +1,6 @@
+⚠️⚠️**THE PROJECT IS IN DEVELOPMENT STAGE**⚠️⚠️
+
+
 Creating an application that **automatically edits user resumes** is a powerful idea — especially when integrated with **AI-driven suggestions**, **ATS optimization**, and **job-role personalization**. Here's a detailed **roadmap** to help you build this system, along with **feature suggestions** that can set your app apart from others.
 
 ---
@@ -130,21 +133,7 @@ Creating an application that **automatically edits user resumes** is a powerful 
 | PDF Rendering  | Puppeteer / react-pdf / pdfkit      |
 | Hosting        | Vercel / Netlify / Render / Heroku  |
 
----
 
-## 🧪 MVP in 1 Week (Rapid Prototype Plan)
-
-| Day   | Task                                             |
-| ----- | ------------------------------------------------ |
-| Day 1 | Setup project, login/auth, file upload           |
-| Day 2 | Resume parsing and structured display            |
-| Day 3 | Add JD input and NLP keyword extractor           |
-| Day 4 | GPT-based suggestions for skills & bullet points |
-| Day 5 | Export resume to PDF with styling                |
-| Day 6 | Cover letter generator                           |
-| Day 7 | Testing, UI polish, deploy to Netlify/Render     |
-
----
 
 Would you like me to:
 
