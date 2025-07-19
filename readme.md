@@ -1,5 +1,7 @@
 ⚠️⚠️**THE PROJECT IS IN DEVELOPMENT STAGE**⚠️⚠️
 
+**FULL APPLICATION NOT NET COMPLETED**
+
 
 Creating an application that **automatically edits user resumes** is a powerful idea — especially when integrated with **AI-driven suggestions**, **ATS optimization**, and **job-role personalization**. Here's a detailed **roadmap** to help you build this system, along with **feature suggestions** that can set your app apart from others.
 
