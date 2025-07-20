@@ -1,4 +1,5 @@
 ⚠️⚠️**THE PROJECT IS IN DEVELOPMENT STAGE**⚠️⚠️
+**pull request can be accepted for project updation**
 
 **FULL APPLICATION NOT NET COMPLETED**
 
